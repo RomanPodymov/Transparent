@@ -1,0 +1,30 @@
+name: Transparent
+options:
+  bundleIdPrefix: com.transparent
+  deploymentTarget:
+    iOS: 14.0
+  xcodeVersion: "13.2.1"
+packages:
+  Kingfisher:
+    url: https://github.com/onevcat/Kingfisher
+    version: 7.10.0
+  CombineMoya:
+    url: https://github.com/Moya/Moya
+    version: 15.0.3
+  SwiftUI_CSS:
+    url: https://github.com/hite/SwiftUI-CSS
+    branch: master
+  ViewInspector:
+    url: https://github.com/nalexn/ViewInspector
+    version: 0.9.5
+targets:
+  TransparentApp:
+    type: application
+    platform: iOS
+    sources: [Transparent]
+    dependencies:
+      - package: Kingfisher
+      - package: CombineMoya
+      - package: SwiftUI_CSS
+    info:
+      path: Transparent/Info.plist
